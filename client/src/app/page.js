@@ -1,41 +1,43 @@
-'use client'
-import Image from 'next/image'
-import './page.css';
+"use client";
+import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { white } from '@mui/material/colors';
-import Navbar from '@/components/Navbar';
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/Hero";
+import "./page.css";
 
 const theme = createTheme({
-  palette:{
-    primary:{
-      main:'#1FA5FF'
+  palette: {
+    primary: {
+      main: "#1FA5FF",
     },
   },
-  typography:{
-    fontFamily:'Inter',
-    fontSize:12
+  typography: {
+    fontFamily: "Inter",
+    fontSize: 12,
   },
-  components:{
-    MuiButton:{
-      styleOverrides:{
-        root:{
-          color:'white',
-          borderRadius:'6.25rem'
-        }
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "white",
+          borderRadius: "6.25rem",
+        },
       },
-      defaultProps:{
-        disableRipple: true
-      }
-    }
-  }
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
+  },
 });
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
-    <main className={'main'}>
-      <Navbar/>
-      hello
-    </main>
+      <main className={"main"}>
+        <Navbar />
+        <Box sx={{padding:5.62}}>
+            <HeroSection/>
+        </Box>
+      </main>
     </ThemeProvider>
-  )
+  );
 }
