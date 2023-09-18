@@ -77,12 +77,13 @@ function HeroSection() {
             height={0}
             sizes="100vw"
             className="hero_logo"
+            alt="Hero section image"
           />
         </Box>
       </Box>
       <Box sx={{padding:'3rem 0rem',display: "flex",flexDirection:'row',justifyContent:'center',gap:'1.75rem'}}>
         {features.map((feature,index)=>(
-        <Paper sx={{flex:1,borderRadius:'1.5rem', minHeight:'10rem',display:'flex',flexDirection:'column',gap:'1.25rem',padding:'0.625rem 1.25rem'}}>
+        <Paper key={index} sx={{flex:1,borderRadius:'1.5rem', minHeight:'10rem',display:'flex',flexDirection:'column',gap:'1.25rem',padding:'0.625rem 1.25rem'}}>
             <Typography variant="h2" sx={{fontWeight:900,textAlign:'center',color:feature.color}}>{feature.title}</Typography>
             <Typography variant="h4" sx={{fontWeight:600,textAlign:'center',color:'#2B2D42'}}>{feature.description}</Typography>
         </Paper>

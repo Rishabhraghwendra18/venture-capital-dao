@@ -30,6 +30,7 @@ function Navbar() {
             sizes="100vw"
             className="logo_image"
             onClick={()=>setSelectedOption(-1)}
+            alt="logo"
           />
           <Box sx={{ flexGrow: 1, display: "flex" }}>
 
