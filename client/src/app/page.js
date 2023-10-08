@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/Hero";
+import OnGoingFundingRound from "@/components/UpcommingProject";
 import "./page.css";
 
 const theme = createTheme({
@@ -34,8 +35,9 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <main className={"main"}>
         <Navbar />
-        <Box sx={{padding:5.62}}>
+        <Box sx={{padding:'45px 100px'}}>
             <HeroSection/>
+            <OnGoingFundingRound/>
         </Box>
       </main>
     </ThemeProvider>
